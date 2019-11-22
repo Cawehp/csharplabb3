@@ -13,9 +13,69 @@ namespace labb3
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        //public double Belopp
+        //{
+        //    get
+        //    {
+        //        return 10;
+        //    }
+        //}
+
         public MainPage()
         {
             InitializeComponent();
+
+        }
+
+        private void OnLowClicked(object sender, EventArgs args)
+        {
+            if (UserInput.Text != null)
+            {
+                Belopp.Text = UserInput.Text;
+                Moms.Text = Eight.Text;
+
+                double amount = double.Parse(UserInput.Text);
+
+                var calcVal = amount * 0.92;
+                UtBelopp.Text = calcVal.ToString();
+
+                var calcVat = amount * 0.08;
+                UtMoms.Text = calcVat.ToString();
+            }
+        }
+
+        private void OnMidClicked(object sender, EventArgs args)
+        {
+            if (UserInput.Text != null)
+            {
+                Belopp.Text = UserInput.Text;
+                Moms.Text = Twelve.Text;
+
+                double amount = double.Parse(UserInput.Text);
+
+                var calcVal = amount * 0.88;
+                UtBelopp.Text = calcVal.ToString();
+
+                var calcVat = amount * 0.12;
+                UtMoms.Text = calcVat.ToString();
+            }
+        }
+
+        private void OnHighClicked(object sender, EventArgs args)
+        {
+            if (UserInput.Text != null)
+            {
+                Belopp.Text = UserInput.Text;
+                Moms.Text = TwentyFive.Text;
+
+                double amount = double.Parse(UserInput.Text);
+
+                var calcVal = amount * 0.75;
+                UtBelopp.Text = calcVal.ToString();
+
+                var calcVat = amount * 0.25;
+                UtMoms.Text = calcVat.ToString();
+            }
         }
     }
 }

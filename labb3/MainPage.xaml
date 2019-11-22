@@ -2,6 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="labb3.MainPage">
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <Label Text="Inmatat belopp:" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <Label x:Name="Belopp" HorizontalOptions="Center"/>
+        <Label Text="Momssats:" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <Label x:Name="Moms" HorizontalOptions="Center"/>
+        <Label Text="Uträknat belopp:" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <Label x:Name="UtBelopp" HorizontalOptions="Center"/>
+        <Label Text="Uträknad moms:" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <Label x:Name="UtMoms" HorizontalOptions="Center"/>
+        <Entry x:Name="UserInput" Placeholder="Skriv ett belopp inklusive moms"></Entry>
+        <Button x:Name="Eight" Text="8%" Clicked="OnLowClicked"/>
+        <Button x:Name="Twelve" Text="12%" Clicked="OnMidClicked"/>
+        <Button x:Name="TwentyFive" Text="25%" Clicked="OnHighClicked"/>
     </StackLayout>
 </ContentPage>
