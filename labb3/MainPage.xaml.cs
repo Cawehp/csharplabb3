@@ -13,13 +13,6 @@ namespace labb3
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        //public double Belopp
-        //{
-        //    get
-        //    {
-        //        return 10;
-        //    }
-        //}
 
         public MainPage()
         {
@@ -31,16 +24,16 @@ namespace labb3
         {
             if (UserInput.Text != null)
             {
-                Belopp.Text = UserInput.Text;
+                Belopp.Text = UserInput.Text + " SEK";
                 Moms.Text = Eight.Text;
 
                 double amount = double.Parse(UserInput.Text);
 
                 var calcVal = amount * 0.92;
-                UtBelopp.Text = calcVal.ToString();
+                UtBelopp.Text = calcVal.ToString() + " SEK";
 
                 var calcVat = amount * 0.08;
-                UtMoms.Text = calcVat.ToString();
+                UtMoms.Text = calcVat.ToString() + " SEK";
             }
         }
 
@@ -48,16 +41,16 @@ namespace labb3
         {
             if (UserInput.Text != null)
             {
-                Belopp.Text = UserInput.Text;
+                Belopp.Text = UserInput.Text + " SEK";
                 Moms.Text = Twelve.Text;
 
                 double amount = double.Parse(UserInput.Text);
 
                 var calcVal = amount * 0.88;
-                UtBelopp.Text = calcVal.ToString();
+                UtBelopp.Text = calcVal.ToString() + " SEK";
 
                 var calcVat = amount * 0.12;
-                UtMoms.Text = calcVat.ToString();
+                UtMoms.Text = calcVat.ToString() + " SEK";
             }
         }
 
@@ -65,16 +58,16 @@ namespace labb3
         {
             if (UserInput.Text != null)
             {
-                Belopp.Text = UserInput.Text;
+                Belopp.Text = UserInput.Text + " SEK";
                 Moms.Text = TwentyFive.Text;
 
                 double amount = double.Parse(UserInput.Text);
 
                 var calcVal = amount * 0.75;
-                UtBelopp.Text = calcVal.ToString();
+                UtBelopp.Text = calcVal.ToString() + " SEK";
 
                 var calcVat = amount * 0.25;
-                UtMoms.Text = calcVat.ToString();
+                UtMoms.Text = calcVat.ToString() + " SEK";
             }
         }
     }
